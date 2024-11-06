@@ -4,193 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zarządzacz Miejscami Parkingowymi</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('IMG_4690.jpg');
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px; /* Można dostosować maksymalną szerokość */
-            /* background-color: rgba(255, 255, 255, 0.8); Półprzezroczyste białe tło */
-            padding: 20px;
-            border-radius: 10px;
-            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
-        }
-
-
-        .form-container {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .parking-map {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .parking-row {
-            display: flex;
-        }
-
-        .parking-space {
-            width: 100px;
-            height: 100px;
-            border: 1px solid #000;
-            margin: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            border-radius: 10px;
-        }
-
-        /* .occupied {
-            /* background-color: lightgreen; */
-        /* } */ 
-
-        select {
-            font-size: 18px;
-            padding: 8px;
-            border-radius: 5px;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            /* height: 100%; */
-            overflow-y: hidden;
-        }
-        body {
-            background-image: url('IMG_4690.jpg');
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.31);
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            outline: 0px solid #000000;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: white;
-        }
-        .button-33 {
-            background-color: #fbedc2;
-            border-radius: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        footer {
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .table-form select {
-        appearance: none;
-        -webkit-appearance: none;
-        width: 100%;
-        font-size: 18px;
-        padding: 8px 9px 8px 9px;
-        background-color: #FFFFFF;
-        border: 1px outset #C4D1EB;
-        border-radius: 19px;
-        color: #FF822F;
-        cursor: pointer;
-        outline: none;
-        }
-
-        .table-form select:focus {
-            background: #F2F2F2;
-            border: 1px solid #C7C7C7;
-            border-radius: 20px;
-        }
-        .button-33 {
-        background-color: #fbedc2;
-        border-radius: 100px;
-        box-shadow: rgba(175, 98, 20, 0.2) 0 -25px 18px -14px inset,rgba(187, 130, 44, 0.15) 0 1px 2px,rgba(174, 123, 19, 0.15) 0 2px 4px,rgba(185, 121, 17, 0.15) 0 4px 8px,rgba(187, 96, 25, 0.15) 0 8px 16px,rgba(188, 128, 16, 0.15) 0 16px 32px;
-        color: rgb(128, 83, 0);
-        cursor: pointer;
-        display: inline-block;
-        font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-        padding: 7px 20px;
-        text-align: center;
-        text-decoration: none;
-        transition: all 250ms;
-        border: 0;
-        font-size: 16px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        }
-
-        .button-33:hover {
-        box-shadow: rgba(228, 162, 8, 0.35) 0 -25px 18px -14px inset,rgba(187, 108, 44, 0.25) 0 1px 2px,rgba(187, 134, 44, 0.25) 0 2px 4px,rgba(187, 137, 44, 0.25) 0 4px 8px,rgba(187, 137, 44, 0.25) 0 8px 16px,rgba(187, 125, 44, 0.25) 0 16px 32px;
-        transform: scale(1.05) rotate(-1deg);
-        }
-        /* Responsywność dla mniejszych ekranów (tablety, smartfony) */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            .parking-space {
-                width: 80px;
-                height: 80px;
-                font-size: 14px;
-            }
-            .button-33 {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-            .thumbnail {
-                width: 60px;
-                height: 60px;
-            }
-            .parking-space img {
-                width: 50px; /* Dostostosuj rozmiar */
-                height: 50px;
-                object-fit: contain; /* Dopasowanie obrazu do kontenera */
-            }
-
-        }
-
-        @media (max-width: 480px) {
-            .form-container, .parking-map {
-                width: 100%;
-                flex-direction: column;
-            }
-            .parking-space {
-                width: 60px;
-                height: 60px;
-                font-size: 12px;
-            }
-            .thumbnail {
-                width: 50px;
-                height: 50px;
-            }
-            .button-33 {
-                font-size: 12px;
-            }
-        }
-            .parking-space img {
-                width: 40px; /* Dostostosuj rozmiar */
-                height: 40px;
-                object-fit: contain; /* Dopasowanie obrazu do kontenera */
-            }
-
-    </style>
+    <link rel="stylesheet" href="style.css">k
 </head>
 <body>
     <div class="container">
@@ -205,24 +19,22 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-
             <label for="table-number">Nr stolika:</label>
             <select id="table-number">
                 <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-                <option value="6">6</option>
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
-                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
             </select>
-
-            <button class="button-33" id="submit-button">Zapisz!</button>
+            <button class="button-33" id="submit-button"><img src="food.png" alt="" width="64px" height="64px"></button>
         </div>
-
         <!-- Mapa parkingowa na dole -->
         <div class="parking-map">
             <h3>Mapa Parkingowa</h3>
@@ -237,47 +49,9 @@
                 <div id="parking-space-6" class="parking-space"><img src="parking6.png" alt="Parking 6"></div>
             </div>
         </div>
-        
         <!-- Stopka -->
-        <footer><p>Made by V&D</p></footer>
+        <footer><p>Made by Volodymyr K</p></footer>
     </div>
-
-    <script>
-const submitButton = document.getElementById('submit-button');
-
-submitButton.addEventListener('click', () => {
-    const parkingNumber = document.getElementById('parking-number').value;
-    const tableNumber = document.getElementById('table-number').value;
-    
-    const selectedSpace = document.getElementById(`parking-space-${parkingNumber}`);
-    const tableImagePath = `stolik${tableNumber}.png`;
-    const parkingImagePath = `parking${parkingNumber}.png`;
-    
-    if (!selectedSpace.classList.contains('occupied')) {
-        selectedSpace.classList.add('occupied');
-        
-        // Tworzenie elementów <img> dla stolika i miejsca parkingowego
-        const tableImg = document.createElement("img");
-        tableImg.src = tableImagePath;
-        tableImg.alt = `Stolik ${tableNumber}`;
-        tableImg.style.width = "40px";
-        tableImg.style.height = "40px";
-        
-        const parkingImg = document.createElement("img");
-        parkingImg.src = parkingImagePath;
-        parkingImg.alt = `Parking ${parkingNumber}`;
-        parkingImg.style.width = "40px";
-        parkingImg.style.height = "40px";
-
-        // Wyczyść istniejące treści i dodaj obrazy stolika i parkingu
-        selectedSpace.innerHTML = "";
-        selectedSpace.appendChild(parkingImg);
-        selectedSpace.appendChild(tableImg);
-    } else {
-        alert('To miejsce już jest zajęte!');
-    }
-});
-
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
