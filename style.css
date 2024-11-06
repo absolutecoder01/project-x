@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('IMG_4690.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.container {
+    width: 100%;
+    max-width: 1200px; /* Można dostosować maksymalną szerokość */
+    padding: 20px;
+    border-radius: 10px;
+}
+.form-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.parking-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parking-row {
+    display: flex;
+}
+.parking-space {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+select {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 5px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body {
+    background-image: url('IMG_4690.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.31);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    outline: 0px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.button-33 {
+    background-color: #fbedc2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.table-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 9px 8px 9px;
+    background-color: #FFFFFF;
+    border: 1px outset #C4D1EB;
+    border-radius: 19px;
+    color: #FF822F;
+    cursor: pointer;
+    outline: none;
+}
+.table-form select:focus {
+    background: #F2F2F2;
+    border: 1px solid #c7c7c700;
+    border-radius: 20px;
+}
+.button-33 {
+    background-color: #fbedc200;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.button-33:hover {
+    box-shadow: rgba(228, 162, 8, 0.35) 0 -25px 18px -14px inset,rgba(187, 108, 44, 0.25) 0 1px 2px,rgba(187, 134, 44, 0.25) 0 2px 4px,rgba(187, 137, 44, 0.25) 0 4px 8px,rgba(187, 137, 44, 0.25) 0 8px 16px,rgba(187, 125, 44, 0.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+    border-radius: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* Responsywność dla mniejszych ekranów (tablety, smartfony) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .parking-space {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+    .button-33 {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+    .parking-space img {
+        width: 50px; /* Dostostosuj rozmiar */
+        height: 50px;
+        object-fit: contain; /* Dopasowanie obrazu do kontenera */
+    }
+}
+@media (max-width: 480px) {
+    .form-container, .parking-map {
+        width: 100%;
+        flex-direction: column;
+    }
+    .parking-space {
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    .button-33 {
+        font-size: 12px;
+    }
+}
+.parking-space img {
+    width: 40px; /* Dostostosuj rozmiar */
+    height: 40px;
+    object-fit: contain; /* Dopasowanie obrazu do kontenera */
+}
+.button-33 img {
+    text-align: center;
+    justify-content: center;
+}
