@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('IMG_4690.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(5px);
@@ -55,7 +55,7 @@ body {
     overflow-x: hidden;
 }
 body {
-    background-image: url('IMG_4690.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
